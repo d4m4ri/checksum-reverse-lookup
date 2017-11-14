@@ -27,12 +27,12 @@ public class TestCollisions {
 		String input2 = "4dc968ff0ee35c209572d4777b721587d36fa7b21bdc56b74a3dc0783e7b9518afbfa202a8284bf36e8e4b55b35f427593d849676da0d1d55d8360fb5f07fea2";
 		assertFalse("Expected inputs to be different", input1.equalsIgnoreCase(input2));
 
-		md5.Init();
-		md5.Update(Hex.decodeHex(input1.toCharArray()));
+		md5.init();
+		md5.update(Hex.decodeHex(input1.toCharArray()));
 		String checksum1 = md5.asHex();
 
-		md5.Init();
-		md5.Update(Hex.decodeHex(input2.toCharArray()));
+		md5.init();
+		md5.update(Hex.decodeHex(input2.toCharArray()));
 		String checksum2 = md5.asHex();
 
 		assertTrue("Expected input checksums to collide", checksum1.equalsIgnoreCase(checksum2));
@@ -50,12 +50,12 @@ public class TestCollisions {
 						"e99f33420f577ee8ce54b67080280d1ec69821bcb6a8839396f965ab6ff72a70";
 		assertFalse("Expected inputs to be different", input1.equalsIgnoreCase(input2));
 
-		md5.Init();
-		md5.Update(Hex.decodeHex(input1.toCharArray()));
+		md5.init();
+		md5.update(Hex.decodeHex(input1.toCharArray()));
 		String checksum1 = md5.asHex();
 
-		md5.Init();
-		md5.Update(Hex.decodeHex(input2.toCharArray()));
+		md5.init();
+		md5.update(Hex.decodeHex(input2.toCharArray()));
 		String checksum2 = md5.asHex();
 
 		assertTrue("Expected input checksums to collide", checksum1.equalsIgnoreCase(checksum2));

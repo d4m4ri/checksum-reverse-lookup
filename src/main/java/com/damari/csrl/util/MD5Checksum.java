@@ -19,21 +19,20 @@ public class MD5Checksum {
 		md5 = new MD5();
 	}
 
-	public void Init() {
+	public void init() {
 		md5.Init();
 	}
 
-	public void Update(byte[] buffer) {
+	public void update(byte[] buffer) {
 		md5.Update(buffer);
 	}
-	public void Update(byte[] buffer, int length) {
+	public void update(byte[] buffer, int length) {
 		md5.Update(buffer, length);
 	}
 
 	/**
 	 * Modified fastmd5 asHex() without new byte as it's memory intensive without cost.
 	 * Should boost performance when threading.
-	 * @param hash byte array.
 	 * @return String with MD5 checksum.
 	 */
 	public String asHex() {

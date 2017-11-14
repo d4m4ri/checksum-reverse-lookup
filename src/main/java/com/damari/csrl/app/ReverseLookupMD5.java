@@ -117,8 +117,8 @@ public class ReverseLookupMD5 {
 
 	private String element(char[] result, int offset, int length) throws UnsupportedEncodingException {
 		String reverseLookup = new String(result, offset, length);
-		md5.Init();
-		md5.Update(reverseLookup.getBytes(iso88591charset), length);
+		md5.init();
+		md5.update(reverseLookup.getBytes(iso88591charset), length);
 		String md5hex = md5.asHex();
 
 		if (md5hex.equalsIgnoreCase(findChecksum)) {
