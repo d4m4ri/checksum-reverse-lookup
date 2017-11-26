@@ -37,7 +37,8 @@ public class MD5Checksum {
 	 */
 	public String asHex() {
 		byte hash[] = md5.Final();
-		for (int i = 0, x = 0; i < 16; i++) {
+		int x = 0;
+		for (int i = 0; i < 16; i++) {
 			byteToHexBuffer[x++] = HEX_CHARS[(hash[i] >>> 4) & 0xf];
 			byteToHexBuffer[x++] = HEX_CHARS[hash[i] & 0xf];
 		}
